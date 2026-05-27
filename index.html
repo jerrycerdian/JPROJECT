@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JPROJECT – Solusi Jasa Profesional</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            accent:  '#14b8a6'
+          },
+          fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-slate-950 dark:bg-slate-950 text-slate-100 light:bg-white light:text-slate-900 overflow-x-hidden transition-colors duration-300">
+
+  <!-- ░░ NAVBAR ░░ -->
+  <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+      <a href="#home" class="text-2xl font-bold tracking-wide">J<span class="text-accent">PROJECT</span></a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#home"         class="nav-link">Beranda</a>
+        <a href="#services"     class="nav-link">Layanan</a>
+        <a href="#portfolio"    class="nav-link">Portfolio</a>
+        <a href="#testimonials" class="nav-link">Testimoni</a>
+        <a href="#contact"      class="nav-link">Kontak</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button id="themeToggle" aria-label="Toggle theme"
+          class="p-2 rounded-xl bg-white/10 hover:bg-white/20 transition text-lg">🌙</button>
+        <button id="menuBtn" class="md:hidden p-2 rounded-xl bg-white/10 hover:bg-white/20 transition" aria-label="Menu">
+          <span id="menuIcon">☰</span>
+        </button>
+      </div>
+    </div>
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-5 pt-1">
+      <div class="flex flex-col gap-3 text-sm font-medium glass-card rounded-2xl p-5 border border-white/10">
+        <a href="#home"         class="nav-link">Beranda</a>
+        <a href="#services"     class="nav-link">Layanan</a>
+        <a href="#portfolio"    class="nav-link">Portfolio</a>
+        <a href="#testimonials" class="nav-link">Testimoni</a>
+        <a href="#contact"      class="nav-link">Kontak</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ░░ HERO ░░ -->
+    <section id="home" class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center py-20 relative z-10">
+        <div class="space-y-8 reveal">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/10 text-sm">
+            ✨ Solusi jasa profesional untuk bisnis Anda
+          </span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+            Bangun <span class="gradient-text">brand jasa</span> yang terlihat profesional
+          </h1>
+          <p class="text-slate-400 text-lg max-w-xl">
+            Kami membantu Anda menampilkan layanan, portfolio, testimoni, dan kontak dalam satu website modern yang cepat dan responsive.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#contact" class="btn-primary">Hubungi Sekarang</a>
+            <a href="#portfolio" class="btn-secondary">Lihat Portfolio</a>
+          </div>
+          <div class="grid grid-cols-3 gap-4 max-w-sm">
+            <div class="stat-card reveal"><h3 class="text-2xl font-extrabold">120+</h3><p class="text-slate-400 text-xs mt-1">Project</p></div>
+            <div class="stat-card reveal"><h3 class="text-2xl font-extrabold">98%</h3><p class="text-slate-400 text-xs mt-1">Kepuasan</p></div>
+            <div class="stat-card reveal"><h3 class="text-2xl font-extrabold">24/7</h3><p class="text-slate-400 text-xs mt-1">Support</p></div>
+          </div>
+        </div>
+        <div class="animate-float relative reveal">
+          <div class="absolute -inset-6 bg-accent/20 blur-3xl rounded-full pointer-events-none"></div>
+          <div class="glass-card p-6 sm:p-8 rounded-3xl border border-white/10 grid grid-cols-2 gap-4 relative">
+            <div class="feature-card">💻<h4 class="font-bold mt-2">Desain Modern</h4><p class="text-xs text-slate-400 mt-1">UI elegan dan profesional</p></div>
+            <div class="feature-card">📱<h4 class="font-bold mt-2">Responsive</h4><p class="text-xs text-slate-400 mt-1">Cocok mobile & desktop</p></div>
+            <div class="feature-card">⚡<h4 class="font-bold mt-2">Cepat</h4><p class="text-xs text-slate-400 mt-1">Performa optimal</p></div>
+            <div class="feature-card">🔒<h4 class="font-bold mt-2">Aman</h4><p class="text-xs text-slate-400 mt-1">Code standar industri</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ SERVICES ░░ -->
+    <section id="services" class="py-24 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="section-badge">Layanan</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 mb-4">Layanan Unggulan</h2>
+          <p class="text-slate-400">Pilihan layanan terbaik untuk memaksimalkan bisnis Anda.</p>
+        </div>
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <div class="service-card reveal">
+            <div class="icon-box">🎨</div>
+            <h3 class="text-xl font-bold mt-4 mb-2">Desain Website</h3>
+            <p class="text-slate-400 text-sm">Website modern untuk bisnis jasa, toko, atau personal brand.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="icon-box">🚀</div>
+            <h3 class="text-xl font-bold mt-4 mb-2">Landing Page</h3>
+            <p class="text-slate-400 text-sm">Halaman promosi yang fokus pada konversi dan penjualan.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="icon-box">🛠️</div>
+            <h3 class="text-xl font-bold mt-4 mb-2">Maintenance</h3>
+            <p class="text-slate-400 text-sm">Perawatan website agar tetap aman, cepat, dan stabil.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="icon-box">🤖</div>
+            <h3 class="text-xl font-bold mt-4 mb-2">Bot Otomasi</h3>
+            <p class="text-slate-400 text-sm">Bot WhatsApp / Telegram untuk layanan pelanggan otomatis.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="icon-box">📊</div>
+            <h3 class="text-xl font-bold mt-4 mb-2">Dashboard Admin</h3>
+            <p class="text-slate-400 text-sm">Panel admin yang intuitif untuk mengelola data bisnis Anda.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="icon-box">📦</div>
+            <h3 class="text-xl font-bold mt-4 mb-2">Full Package</h3>
+            <p class="text-slate-400 text-sm">Paket lengkap website + bot + maintenance dengan harga terbaik.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ PORTFOLIO ░░ -->
+    <section id="portfolio" class="py-24 bg-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="section-badge">Portfolio</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 mb-4">Hasil Kerja Kami</h2>
+          <p class="text-slate-400">Klik kartu portfolio untuk melihat detail project.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="portfolio-card reveal" data-title="Website Bisnis" data-desc="Website company profile modern dengan desain clean. Fitur: hero, layanan, kontak, dan map lokasi. Tech: HTML, TailwindCSS, JS." data-color="from-primary to-accent">
+            <div class="portfolio-thumb bg-gradient-to-br from-primary to-accent"></div>
+            <div class="p-4"><h3 class="font-bold mb-1">Website Bisnis</h3><p class="text-slate-400 text-sm">Company profile modern & professional</p></div>
+          </div>
+          <div class="portfolio-card reveal" data-title="Landing Page Promo" data-desc="Landing page promosi produk dengan CTA dan countdown timer. Dioptimalkan untuk konversi tinggi. Tech: Next.js, TailwindCSS." data-color="from-accent to-cyan-400">
+            <div class="portfolio-thumb bg-gradient-to-br from-accent to-cyan-400"></div>
+            <div class="p-4"><h3 class="font-bold mb-1">Landing Page Promo</h3><p class="text-slate-400 text-sm">Fokus pada CTA dan lead generation</p></div>
+          </div>
+          <div class="portfolio-card reveal" data-title="Dashboard Admin" data-desc="Panel admin dengan tabel data, grafik statistik, dan manajemen pengguna. Tech: Node.js, Express, Socket.io, MySQL." data-color="from-fuchsia-500 to-primary">
+            <div class="portfolio-thumb bg-gradient-to-br from-fuchsia-500 to-primary"></div>
+            <div class="p-4"><h3 class="font-bold mb-1">Dashboard Admin</h3><p class="text-slate-400 text-sm">Realtime analytics & manajemen data</p></div>
+          </div>
+          <div class="portfolio-card reveal" data-title="Bot WhatsApp" data-desc="Bot WhatsApp otomatis dengan fitur menu, notifikasi, dan database SQLite. Tech: Node.js, Baileys, SQLite." data-color="from-green-500 to-accent">
+            <div class="portfolio-thumb bg-gradient-to-br from-green-500 to-accent"></div>
+            <div class="p-4"><h3 class="font-bold mb-1">Bot WhatsApp</h3><p class="text-slate-400 text-sm">Otomasi layanan pelanggan 24/7</p></div>
+          </div>
+          <div class="portfolio-card reveal" data-title="Toko Online" data-desc="Website toko online dengan cart, checkout, dan integrasi payment gateway. Tech: Laravel, MySQL, Midtrans." data-color="from-orange-500 to-rose-500">
+            <div class="portfolio-thumb bg-gradient-to-br from-orange-500 to-rose-500"></div>
+            <div class="p-4"><h3 class="font-bold mb-1">Toko Online</h3><p class="text-slate-400 text-sm">E-commerce dengan payment gateway</p></div>
+          </div>
+          <div class="portfolio-card reveal" data-title="Portfolio Personal" data-desc="Website portofolio personal untuk developer/freelancer dengan tampilan animasi scroll reveal. Tech: HTML, CSS, JS." data-color="from-violet-500 to-primary">
+            <div class="portfolio-thumb bg-gradient-to-br from-violet-500 to-primary"></div>
+            <div class="p-4"><h3 class="font-bold mb-1">Portfolio Personal</h3><p class="text-slate-400 text-sm">Showcase kreativitas freelancer</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ TESTIMONI ░░ -->
+    <section id="testimonials" class="py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="section-badge">Testimoni</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 mb-4">Kata Mereka</h2>
+          <p class="text-slate-400">Dipercaya oleh banyak klien bisnis dari berbagai industri.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="testimonial-card reveal">
+            <div class="stars">★★★★★</div>
+            <p class="text-slate-300 mt-3 text-sm italic">"Website ini membuat bisnis saya terlihat jauh lebih profesional. Client makin percaya!"</p>
+            <div class="flex items-center gap-3 mt-5">
+              <div class="avatar bg-gradient-to-br from-primary to-accent">AP</div>
+              <div><h4 class="font-bold text-sm">Andi Pratama</h4><span class="text-xs text-slate-400">Owner Jasa Digital</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal">
+            <div class="stars">★★★★★</div>
+            <p class="text-slate-300 mt-3 text-sm italic">"Responsif, cepat, dan desainnya keren banget. Sesuai request saya 100%."</p>
+            <div class="flex items-center gap-3 mt-5">
+              <div class="avatar bg-gradient-to-br from-accent to-cyan-400">SR</div>
+              <div><h4 class="font-bold text-sm">Sinta Rahma</h4><span class="text-xs text-slate-400">Marketing Manager</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal">
+            <div class="stars">★★★★★</div>
+            <p class="text-slate-300 mt-3 text-sm italic">"Bot WhatsApp-nya sangat membantu tim CS kami. Orderan jadi lebih terstruktur."</p>
+            <div class="flex items-center gap-3 mt-5">
+              <div class="avatar bg-gradient-to-br from-fuchsia-500 to-primary">BS</div>
+              <div><h4 class="font-bold text-sm">Budi Santoso</h4><span class="text-xs text-slate-400">Founder Creative Studio</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ CONTACT ░░ -->
+    <section id="contact" class="py-24 bg-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="section-badge">Kontak</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 mb-4">Hubungi Kami</h2>
+          <p class="text-slate-400">Konsultasi gratis. Kami akan membalas dalam 1×24 jam.</p>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-10 items-start">
+          <div class="space-y-5 reveal">
+            <div class="info-card"><span>📍</span><div><h4 class="font-semibold">Lokasi</h4><p class="text-slate-400 text-sm">Indonesia</p></div></div>
+            <div class="info-card"><span>📞</span><div><h4 class="font-semibold">WhatsApp</h4><p class="text-slate-400 text-sm">+855-882592825</p></div></div>
+            <div class="info-card"><span>✉️</span><div><h4 class="font-semibold">Email</h4><p class="text-slate-400 text-sm">distirajerrycerdian@gmail.com</p></div></div>
+            <div class="info-card"><span>🕐</span><div><h4 class="font-semibold">Jam Kerja</h4><p class="text-slate-400 text-sm">Senin – Sabtu, 08.00 – 22.00 WIB</p></div></div>
+          </div>
+          <form id="contactForm" class="glass-card p-6 sm:p-8 rounded-3xl border border-white/10 space-y-4 reveal">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="label-text">Nama*</label>
+                <input id="inputNama" type="text" placeholder="John Doe" class="form-input" required />
+              </div>
+              <div>
+                <label class="label-text">Nomor WhatsApp*</label>
+                <input id="inputWA" type="tel" placeholder="08xx-xxxx-xxxx" class="form-input" required />
+              </div>
+            </div>
+            <div>
+              <label class="label-text">Layanan yang diminati</label>
+              <select id="inputLayanan" class="form-input">
+                <option value="">-- Pilih Layanan --</option>
+                <option>Desain Website</option>
+                <option>Landing Page</option>
+                <option>Maintenance</option>
+                <option>Bot Otomasi</option>
+                <option>Dashboard Admin</option>
+                <option>Full Package</option>
+              </select>
+            </div>
+            <div>
+              <label class="label-text">Pesan / Detail Project*</label>
+              <textarea id="inputPesan" rows="4" placeholder="Ceritakan kebutuhan project Anda..." class="form-input" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full flex items-center justify-center gap-2">
+              <span>💬</span> Kirim via WhatsApp
+            </button>
+            <p class="text-xs text-center text-slate-500">Pesan akan dikirim langsung ke WhatsApp kami.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="py-10 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-400">
+      <span>© 2026 <strong class="text-white">JPROJECT</strong>. All rights reserved.</span>
+      <div class="flex gap-5">
+        <a href="#home" class="hover:text-accent transition">Beranda</a>
+        <a href="#services" class="hover:text-accent transition">Layanan</a>
+        <a href="#contact" class="hover:text-accent transition">Kontak</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ░░ PORTFOLIO MODAL ░░ -->
+  <div id="portfolioModal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <button id="closeModal" class="modal-close">✕</button>
+      <div id="modalThumb" class="h-48 rounded-2xl mb-5"></div>
+      <h3 id="modalTitle" class="text-xl font-extrabold mb-2"></h3>
+      <p id="modalDesc" class="text-slate-300 text-sm leading-relaxed"></p>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
