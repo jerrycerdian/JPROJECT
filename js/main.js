@@ -104,7 +104,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   }
 
   const text = encodeURIComponent(
-    `Halo JasaPro! 👋\n\n` +
+    `Halo Jproject! 👋\n\n` +
     `*Nama:* ${nama}\n` +
     `*No. WA:* ${wa}\n` +
     `*Layanan:* ${layanan}\n\n` +
