@@ -1,83 +1,424 @@
+/* ──────────────────────────────────────────────────────────────────────
+   JPROJECT – Global Styles
+   Dark mode default | Light mode via .light class on <html>
+────────────────────────────────────────────────────────────────────── */
 
-/* ── Global ── */
-html { scroll-behavior: smooth; }
-body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+/* ── 1. Global ───────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
 
-/* ── Navbar ── */
-#navbar { backdrop-filter: blur(20px); background: rgba(2,6,23,0.6); border-bottom: 1px solid rgba(255,255,255,0.06); }
-#navbar.scrolled { background: rgba(2,6,23,0.92); box-shadow: 0 4px 30px rgba(0,0,0,0.4); }
-.nav-link { color:#94a3b8; transition: color 0.25s; }
-.nav-link:hover { color: #14b8a6; }
+body {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
 
-/* ── Light mode overrides ── */
-html.light body { background: #f8fafc; color: #0f172a; }
-html.light #navbar { background: rgba(248,250,252,0.85); border-bottom: 1px solid rgba(0,0,0,0.07); }
-html.light .nav-link { color: #475569; }
-html.light .glass-card { background: rgba(255,255,255,0.7); border: 1px solid rgba(0,0,0,0.08); }
-html.light .service-card, html.light .portfolio-card, html.light .testimonial-card { background: #fff; border: 1px solid #e2e8f0; color: #0f172a; }
-html.light .stat-card, html.light .feature-card, html.light .info-card { background: #f1f5f9; border: 1px solid #e2e8f0; }
-html.light .form-input { background: #f1f5f9; border: 1px solid #cbd5e1; color: #0f172a; }
-html.light .section-badge { background: #e0f2fe; color: #0369a1; }
+/* ── 2. Navbar ───────────────────────────────────────────────────── */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  backdrop-filter: blur(20px);
+  background: rgba(2, 6, 23, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background 0.3s, box-shadow 0.3s;
+}
 
-/* ── Buttons ── */
-.btn-primary { display:inline-flex; align-items:center; justify-content:center; padding:.9rem 1.6rem; border-radius:1rem; font-weight:700; background:linear-gradient(135deg,#2563eb,#14b8a6); color:#fff; transition: transform .2s, box-shadow .2s; }
-.btn-primary:hover { transform:translateY(-3px); box-shadow: 0 12px 28px rgba(20,184,166,.35); }
-.btn-secondary { display:inline-flex; align-items:center; justify-content:center; padding:.9rem 1.6rem; border-radius:1rem; font-weight:700; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); color:#fff; transition: .2s; }
-.btn-secondary:hover { background:rgba(255,255,255,.14); }
+#navbar.scrolled {
+  background: rgba(2, 6, 23, 0.92);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
 
-/* ── Glass Card ── */
-.glass-card { background:rgba(255,255,255,0.05); backdrop-filter:blur(20px); }
+.nav-link {
+  color: #94a3b8;
+  transition: color 0.25s;
+}
 
-/* ── Gradient text ── */
-.gradient-text { background: linear-gradient(135deg, #2563eb, #14b8a6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.nav-link:hover {
+  color: #14b8a6;
+}
 
-/* ── Section badge ── */
-.section-badge { display:inline-block; padding:.3rem .9rem; border-radius:9999px; background:rgba(20,184,166,.12); color:#14b8a6; font-size:.8rem; font-weight:600; letter-spacing:.05em; }
+/* ── 3. Light Mode Overrides ─────────────────────────────────────── */
+html.light body {
+  background: #f8fafc;
+  color: #0f172a;
+}
 
-/* ── Blobs ── */
-.blob { position:absolute; border-radius:50%; filter:blur(90px); pointer-events:none; opacity:.25; }
-.blob-1 { width:500px; height:500px; background:radial-gradient(circle, #2563eb, transparent); top:-100px; left:-150px; animation: blobMove 10s ease-in-out infinite; }
-.blob-2 { width:400px; height:400px; background:radial-gradient(circle, #14b8a6, transparent); bottom:-80px; right:-100px; animation: blobMove 13s ease-in-out infinite reverse; }
-@keyframes blobMove { 0%,100% { transform:translate(0,0) scale(1); } 50% { transform:translate(30px,20px) scale(1.08); } }
+html.light #navbar {
+  background: rgba(248, 250, 252, 0.85);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
 
-/* ── Float animation ── */
-.animate-float { animation: float 5s ease-in-out infinite; }
-@keyframes float { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-12px); } }
+html.light .nav-link {
+  color: #475569;
+}
 
-/* ── Cards ── */
-.feature-card { padding:1rem; border-radius:1rem; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); font-size:.9rem; }
-.stat-card { padding:1rem; border-radius:1rem; text-align:center; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); }
-.service-card { padding:1.5rem; border-radius:1.5rem; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); transition: transform .3s, border-color .3s, box-shadow .3s; cursor:default; }
-.service-card:hover { transform:translateY(-6px); border-color:rgba(20,184,166,.4); box-shadow:0 16px 32px rgba(0,0,0,.3); }
-.icon-box { font-size:2rem; width:52px; height:52px; display:flex; align-items:center; justify-content:center; border-radius:1rem; background:rgba(20,184,166,.1); }
+html.light .glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
 
-/* ── Portfolio ── */
-.portfolio-card { border-radius:1.5rem; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); overflow:hidden; cursor:pointer; transition: transform .3s, box-shadow .3s; }
-.portfolio-card:hover { transform:translateY(-6px); box-shadow:0 20px 40px rgba(0,0,0,.4); }
-.portfolio-thumb { height:180px; }
+html.light .service-card,
+html.light .portfolio-card,
+html.light .testimonial-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  color: #0f172a;
+}
 
-/* ── Testimonials ── */
-.testimonial-card { padding:1.5rem; border-radius:1.5rem; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); transition: transform .3s; }
-.testimonial-card:hover { transform:translateY(-4px); }
-.stars { color:#f59e0b; letter-spacing:.1em; }
-.avatar { width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:.75rem; color:#fff; flex-shrink:0; }
+html.light .stat-card,
+html.light .feature-card,
+html.light .info-card {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+}
 
-/* ── Contact ── */
-.info-card { display:flex; align-items:flex-start; gap:.9rem; padding:1rem 1.2rem; border-radius:1rem; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); font-size:1.3rem; }
-.label-text { display:block; font-size:.8rem; color:#94a3b8; margin-bottom:.4rem; font-weight:500; }
-.form-input { width:100%; padding:.9rem 1rem; border-radius:1rem; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); color:#fff; outline:none; transition: border-color .2s, box-shadow .2s; font-size:.9rem; }
-.form-input::placeholder { color:#94a3b8; }
-.form-input:focus { border-color:#14b8a6; box-shadow:0 0 0 3px rgba(20,184,166,.15); }
-select.form-input option { background:#0f172a; color:#fff; }
+html.light .form-input {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+}
 
-/* ── Modal ── */
-.modal-overlay { position:fixed; inset:0; z-index:100; background:rgba(0,0,0,.75); backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:center; padding:1rem; }
-.modal-overlay.hidden { display:none; }
-.modal-box { position:relative; width:100%; max-width:480px; background:#0f172a; border:1px solid rgba(255,255,255,.1); border-radius:2rem; padding:2rem; animation: modalIn .25s ease; }
-@keyframes modalIn { from { opacity:0; transform:scale(.92); } to { opacity:1; transform:scale(1); } }
-.modal-close { position:absolute; top:1rem; right:1rem; padding:.4rem .7rem; border-radius:.6rem; background:rgba(255,255,255,.08); font-size:1rem; cursor:pointer; transition:.2s; }
-.modal-close:hover { background:rgba(255,255,255,.18); }
+html.light .section-badge {
+  background: #e0f2fe;
+  color: #0369a1;
+}
 
-/* ── Scroll reveal ── */
-.reveal { opacity:0; transform:translateY(28px); transition: opacity .6s ease, transform .6s ease; }
-.reveal.visible { opacity:1; transform:translateY(0); }
+/* ── 4. Buttons ──────────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.6rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #2563eb, #14b8a6);
+  color: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(20, 184, 166, 0.35);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.6rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* ── 5. Glass Card ───────────────────────────────────────────────── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+}
+
+/* ── 6. Gradient Text ────────────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #2563eb, #14b8a6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── 7. Section Badge ────────────────────────────────────────────── */
+.section-badge {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  border-radius: 9999px;
+  background: rgba(20, 184, 166, 0.12);
+  color: #14b8a6;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* ── 8. Blobs (Background Decorations) ───────────────────────────── */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  opacity: 0.25;
+}
+
+.blob-1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #2563eb, transparent);
+  top: -100px;
+  left: -150px;
+  animation: blobMove 10s ease-in-out infinite;
+}
+
+.blob-2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #14b8a6, transparent);
+  bottom: -80px;
+  right: -100px;
+  animation: blobMove 13s ease-in-out infinite reverse;
+}
+
+@keyframes blobMove {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, 20px) scale(1.08);
+  }
+}
+
+/* ── 9. Float Animation ──────────────────────────────────────────── */
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* ── 10. Cards ───────────────────────────────────────────────────── */
+.feature-card {
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.9rem;
+}
+
+.stat-card {
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.service-card {
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  cursor: default;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(20, 184, 166, 0.4);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+.icon-box {
+  font-size: 2rem;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  background: rgba(20, 184, 166, 0.1);
+}
+
+/* ── 11. Portfolio ───────────────────────────────────────────────── */
+.portfolio-card {
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.portfolio-thumb {
+  height: 180px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.portfolio-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.portfolio-card:hover .portfolio-thumb img {
+  transform: scale(1.08);
+}
+
+/* Fallback jika gambar tidak ada */
+.portfolio-thumb:has(img[src=""]) {
+  background: linear-gradient(135deg, #2563eb, #14b8a6);
+}
+
+/* ── 12. Testimonials ────────────────────────────────────────────── */
+.testimonial-card {
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+}
+
+.stars {
+  color: #f59e0b;
+  letter-spacing: 0.1em;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.75rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+/* ── 13. Contact ─────────────────────────────────────────────────── */
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 1rem 1.2rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 1.3rem;
+}
+
+.label-text {
+  display: block;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-size: 0.9rem;
+}
+
+.form-input::placeholder {
+  color: #94a3b8;
+}
+
+.form-input:focus {
+  border-color: #14b8a6;
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.15);
+}
+
+select.form-input option {
+  background: #0f172a;
+  color: #fff;
+}
+
+/* ── 14. Modal ───────────────────────────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-overlay.hidden {
+  display: none;
+}
+
+.modal-box {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  padding: 2rem;
+  animation: modalIn 0.25s ease;
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.6rem;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* ── 15. Scroll Reveal ───────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
