@@ -12,7 +12,7 @@
         extend: {
           colors: {
             primary: '#2563eb',
-            accent:  '#14b8a6'
+            accent: '#14b8a6'
           },
           fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','sans-serif'] }
         }
@@ -23,41 +23,40 @@
 </head>
 <body class="bg-slate-950 dark:bg-slate-950 text-slate-100 light:bg-white light:text-slate-900 overflow-x-hidden transition-colors duration-300">
 
-  <!-- ░░ NAVBAR ░░ -->
+  <!-- NAVBAR -->
   <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
       <a href="#home" class="text-2xl font-bold tracking-wide">J<span class="text-accent">PROJECT</span></a>
 
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-        <a href="#home"         class="nav-link">Beranda</a>
-        <a href="#services"     class="nav-link">Layanan</a>
-        <a href="#portfolio"    class="nav-link">Portfolio</a>
+        <a href="#home" class="nav-link">Beranda</a>
+        <a href="#services" class="nav-link">Layanan</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
         <a href="#testimonials" class="nav-link">Testimoni</a>
-        <a href="#contact"      class="nav-link">Kontak</a>
+        <a href="#contact" class="nav-link">Kontak</a>
       </nav>
 
       <div class="flex items-center gap-3">
-        <button id="themeToggle" aria-label="Toggle theme"
-          class="p-2 rounded-xl bg-white/10 hover:bg-white/20 transition text-lg">🌙</button>
+        <button id="themeToggle" aria-label="Toggle theme" class="p-2 rounded-xl bg-white/10 hover:bg-white/20 transition text-lg">🌙</button>
         <button id="menuBtn" class="md:hidden p-2 rounded-xl bg-white/10 hover:bg-white/20 transition" aria-label="Menu">
           <span id="menuIcon">☰</span>
         </button>
       </div>
     </div>
-    <!-- mobile menu -->
+
     <div id="mobileMenu" class="md:hidden hidden px-4 pb-5 pt-1">
       <div class="flex flex-col gap-3 text-sm font-medium glass-card rounded-2xl p-5 border border-white/10">
-        <a href="#home"         class="nav-link">Beranda</a>
-        <a href="#services"     class="nav-link">Layanan</a>
-        <a href="#portfolio"    class="nav-link">Portfolio</a>
+        <a href="#home" class="nav-link">Beranda</a>
+        <a href="#services" class="nav-link">Layanan</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
         <a href="#testimonials" class="nav-link">Testimoni</a>
-        <a href="#contact"      class="nav-link">Kontak</a>
+        <a href="#contact" class="nav-link">Kontak</a>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- ░░ HERO ░░ -->
+    <!-- HERO -->
     <section id="home" class="relative min-h-screen flex items-center pt-24 overflow-hidden">
       <div class="blob blob-1"></div>
       <div class="blob blob-2"></div>
@@ -82,6 +81,7 @@
             <div class="stat-card reveal"><h3 class="text-2xl font-extrabold">24/7</h3><p class="text-slate-400 text-xs mt-1">Support</p></div>
           </div>
         </div>
+
         <div class="animate-float relative reveal">
           <div class="absolute -inset-6 bg-accent/20 blur-3xl rounded-full pointer-events-none"></div>
           <div class="glass-card p-6 sm:p-8 rounded-3xl border border-white/10 grid grid-cols-2 gap-4 relative">
@@ -94,7 +94,7 @@
       </div>
     </section>
 
-    <!-- ░░ SERVICES ░░ -->
+    <!-- SERVICES -->
     <section id="services" class="py-24 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-16 reveal">
@@ -137,7 +137,7 @@
       </div>
     </section>
 
-    <!-- ░░ PORTFOLIO ░░ -->
+    <!-- PORTFOLIO -->
     <section id="portfolio" class="py-24 bg-white/5">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-16 reveal">
@@ -145,36 +145,72 @@
           <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 mb-4">Hasil Kerja Kami</h2>
           <p class="text-slate-400">Klik kartu portfolio untuk melihat detail project.</p>
         </div>
+
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="portfolio-card reveal" data-title="Website Bisnis" data-desc="Website company profile modern dengan desain clean. Fitur: hero, layanan, kontak, dan map lokasi. Tech: HTML, TailwindCSS, JS." data-color="from-primary to-accent">
-            <div class="portfolio-thumb bg-gradient-to-br from-primary to-accent"></div>
-            <div class="p-4"><h3 class="font-bold mb-1">Website Bisnis</h3><p class="text-slate-400 text-sm">Company profile modern & professional</p></div>
+          <div class="portfolio-card reveal" data-title="BOT Ads Sosmed" data-desc="Website company profile modern dengan desain clean. Fitur: hero, layanan, kontak, dan map lokasi. Tech: HTML, TailwindCSS, JS." data-color="from-primary to-accent" data-img="images/porto1.jpg">
+            <div class="portfolio-thumb overflow-hidden">
+              <img src="images/porto1.webp" alt="BOT Ads Sosmed" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" onerror="this.parentElement.classList.add('bg-gradient-to-br','from-primary','to-accent'); this.style.display='none'" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold mb-1">BOT Ads Sosmed</h3>
+              <p class="text-slate-400 text-sm">Company profile modern & professional</p>
+            </div>
           </div>
-          <div class="portfolio-card reveal" data-title="Landing Page Promo" data-desc="Landing page promosi produk dengan CTA dan countdown timer. Dioptimalkan untuk konversi tinggi. Tech: Next.js, TailwindCSS." data-color="from-accent to-cyan-400">
-            <div class="portfolio-thumb bg-gradient-to-br from-accent to-cyan-400"></div>
-            <div class="p-4"><h3 class="font-bold mb-1">Landing Page Promo</h3><p class="text-slate-400 text-sm">Fokus pada CTA dan lead generation</p></div>
+
+          <div class="portfolio-card reveal" data-title="BOT Blast WhatsApp" data-desc="Landing page promosi produk dengan CTA dan countdown timer. Dioptimalkan untuk konversi tinggi. Tech: Next.js, TailwindCSS." data-color="from-accent to-cyan-400" data-img="images/porto2.jpg">
+            <div class="portfolio-thumb overflow-hidden">
+              <img src="images/porto3.webp" alt="BOT Blast WhatsApp" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" onerror="this.parentElement.classList.add('bg-gradient-to-br','from-accent','to-cyan-400'); this.style.display='none'" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold mb-1">BOT Blast WhatsApp</h3>
+              <p class="text-slate-400 text-sm">Fokus pada CTA dan lead generation</p>
+            </div>
           </div>
-          <div class="portfolio-card reveal" data-title="Dashboard Admin" data-desc="Panel admin dengan tabel data, grafik statistik, dan manajemen pengguna. Tech: Node.js, Express, Socket.io, MySQL." data-color="from-fuchsia-500 to-primary">
-            <div class="portfolio-thumb bg-gradient-to-br from-fuchsia-500 to-primary"></div>
-            <div class="p-4"><h3 class="font-bold mb-1">Dashboard Admin</h3><p class="text-slate-400 text-sm">Realtime analytics & manajemen data</p></div>
+
+          <div class="portfolio-card reveal" data-title="BOT Feeding WhatsApp" data-desc="Panel admin dengan tabel data, grafik statistik, dan manajemen pengguna. Tech: Node.js, Express, Socket.io, MySQL." data-color="from-fuchsia-500 to-primary" data-img="images/porto3.jpg">
+            <div class="portfolio-thumb overflow-hidden">
+              <img src="images/porto4.webp" alt="BOT Feeding WhatsApp" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" onerror="this.parentElement.classList.add('bg-gradient-to-br','from-fuchsia-500','to-primary'); this.style.display='none'" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold mb-1">BOT Feeding WhatsApp</h3>
+              <p class="text-slate-400 text-sm">Realtime analytics & manajemen data</p>
+            </div>
           </div>
-          <div class="portfolio-card reveal" data-title="Bot WhatsApp" data-desc="Bot WhatsApp otomatis dengan fitur menu, notifikasi, dan database SQLite. Tech: Node.js, Baileys, SQLite." data-color="from-green-500 to-accent">
-            <div class="portfolio-thumb bg-gradient-to-br from-green-500 to-accent"></div>
-            <div class="p-4"><h3 class="font-bold mb-1">Bot WhatsApp</h3><p class="text-slate-400 text-sm">Otomasi layanan pelanggan 24/7</p></div>
+
+          <div class="portfolio-card reveal" data-title="Bot Nawala" data-desc="Bot WhatsApp otomatis dengan fitur menu, notifikasi, dan database SQLite. Tech: Node.js, Baileys, SQLite." data-color="from-green-500 to-accent" data-img="images/porto4.jpg">
+            <div class="portfolio-thumb overflow-hidden">
+              <img src="images/porto2.webp" alt="Bot Nawala" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" onerror="this.parentElement.classList.add('bg-gradient-to-br','from-green-500','to-accent'); this.style.display='none'" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold mb-1">Bot Nawala</h3>
+              <p class="text-slate-400 text-sm">Otomasi layanan pelanggan 24/7</p>
+            </div>
           </div>
-          <div class="portfolio-card reveal" data-title="Toko Online" data-desc="Website toko online dengan cart, checkout, dan integrasi payment gateway. Tech: Laravel, MySQL, Midtrans." data-color="from-orange-500 to-rose-500">
-            <div class="portfolio-thumb bg-gradient-to-br from-orange-500 to-rose-500"></div>
-            <div class="p-4"><h3 class="font-bold mb-1">Toko Online</h3><p class="text-slate-400 text-sm">E-commerce dengan payment gateway</p></div>
+
+          <div class="portfolio-card reveal" data-title="Website Sesuai Kebutuhan" data-desc="Website toko online dengan cart, checkout, dan integrasi payment gateway. Tech: Laravel, MySQL, Midtrans." data-color="from-orange-500 to-rose-500" data-img="images/porto5.jpg">
+            <div class="portfolio-thumb overflow-hidden">
+              <img src="images/porto5.jpg" alt="Website Sesuai Kebutuhan" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" onerror="this.parentElement.classList.add('bg-gradient-to-br','from-orange-500','to-rose-500'); this.style.display='none'" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold mb-1">Website Sesuai Kebutuhan</h3>
+              <p class="text-slate-400 text-sm">E-commerce dengan payment gateway</p>
+            </div>
           </div>
-          <div class="portfolio-card reveal" data-title="Portfolio Personal" data-desc="Website portofolio personal untuk developer/freelancer dengan tampilan animasi scroll reveal. Tech: HTML, CSS, JS." data-color="from-violet-500 to-primary">
-            <div class="portfolio-thumb bg-gradient-to-br from-violet-500 to-primary"></div>
-            <div class="p-4"><h3 class="font-bold mb-1">Portfolio Personal</h3><p class="text-slate-400 text-sm">Showcase kreativitas freelancer</p></div>
+
+          <div class="portfolio-card reveal" data-title="Portfolio Personal" data-desc="Website portofolio personal untuk developer/freelancer dengan tampilan animasi scroll reveal. Tech: HTML, CSS, JS." data-color="from-violet-500 to-primary" data-img="images/porto6.jpg">
+            <div class="portfolio-thumb overflow-hidden">
+              <img src="images/porto6.jpg" alt="Portfolio Personal" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" onerror="this.parentElement.classList.add('bg-gradient-to-br','from-violet-500','to-primary'); this.style.display='none'" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold mb-1">Portfolio Personal</h3>
+              <p class="text-slate-400 text-sm">Showcase kreativitas freelancer</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ░░ TESTIMONI ░░ -->
+    <!-- TESTIMONIALS -->
     <section id="testimonials" class="py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-16 reveal">
@@ -211,7 +247,7 @@
       </div>
     </section>
 
-    <!-- ░░ CONTACT ░░ -->
+    <!-- CONTACT -->
     <section id="contact" class="py-24 bg-white/5">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-16 reveal">
@@ -263,7 +299,6 @@
     </section>
   </main>
 
-  <!-- ░░ FOOTER ░░ -->
   <footer class="py-10 border-t border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-400">
       <span>© 2026 <strong class="text-white">JPROJECT</strong>. All rights reserved.</span>
@@ -275,11 +310,11 @@
     </div>
   </footer>
 
-  <!-- ░░ PORTFOLIO MODAL ░░ -->
+  <!-- PORTFOLIO MODAL -->
   <div id="portfolioModal" class="modal-overlay hidden">
     <div class="modal-box">
       <button id="closeModal" class="modal-close">✕</button>
-      <div id="modalThumb" class="h-48 rounded-2xl mb-5"></div>
+      <div id="modalThumb" class="h-48 rounded-2xl mb-5 overflow-hidden"></div>
       <h3 id="modalTitle" class="text-xl font-extrabold mb-2"></h3>
       <p id="modalDesc" class="text-slate-300 text-sm leading-relaxed"></p>
     </div>
